@@ -78,7 +78,7 @@ nav ul li a {
     background-color: #f9f9f9;
     border-radius: 5px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 20px;
 }
 
@@ -86,14 +86,6 @@ nav ul li a {
     height: auto;
     width: 40%;
     border-radius: 5px;
-}
-
-.recipe-details {
-    grid-column: 1 / 2;
-}
-
-.recipe-instructions {
-    grid-column: 2 / 3;
 }
 
 ul,
@@ -169,6 +161,20 @@ ol {
     .recipe img:nth-child(3n + 2) {
         cursor: url("images/javascript_icon.png"), pointer;
     }
+
+    .recipe {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+    .recipe-details {
+        grid-column: 1 / 2;
+    }
+    
+    .recipe-instructions {
+        grid-column: 2 / 3;
+    }
+    
 }
 
 @media screen and (min-width: 1024px) {
@@ -187,5 +193,18 @@ ol {
         padding: 10px;
         text-align: center;
         font-size: 16px;
+    }
+
+    .recipe {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .recipe-details {
+        grid-column: 1 / 2;
+    }
+    
+    .recipe-instructions {
+        grid-column: 2 / 3;
     }
 }

@@ -6,37 +6,58 @@
     <title>Home</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+            // Function to generate a random color
+            function getRandomColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            // Function to change the color of the h1 element to a random color
+            function changeColor() {
+                var heading = document.querySelector('h1');
+                heading.style.color = getRandomColor(); // Change the color to a random color
+            }
+
+            // Add event listener to the button
+            var button = document.getElementById('colorButton');
+            button.addEventListener('click', changeColor);
+        };
+    </script>
 </head>
 <body>
-    <a href = "#main-content" class="skip-link">Skip to Main Content</a>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
     <header>
         <nav>
             <ul>
-                <li><a href = "index.html" class="active">Home</a></li>
-                <li><a href = "pets.html">Pets</a></li>
-                <li><a href = "recipes.html">Recipes</a></li>
-                <li><a href = "travel.html">Travel</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pets.html">Pets</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="travel.html">Travel</a></li>
             </ul>
         </nav>
-
     </header>
     <main id="main-content">
         <h1>Webpage!</h1>
         <div>
             <p>Welcome to <mark>pets, recipes, and travel</mark>, your go-to destination for all things pets, recipes, and travel! Explore a world of captivating content where we cater to your love for furry companions, culinary delights, and globetrotting adventures. </p>
-
         </div>
-
-    <div><ruby>
-        Justin <rp>(</rp><rt>Phillips</rt><rp>)</rp>
-    </ruby>
-    </div>
-    
+        <div>
+            <ruby>
+                Justin <rp>(</rp><rt>Phillips</rt><rp>)</rp>
+            </ruby>
+        </div>
         <div></div>
         <div></div>
         <div></div>
-        <div></div>
+        
+        <!-- Button to change text color -->
+        <button id="colorButton">Change Text Color</button>
     </main>
-    
 </body>
 </html>
